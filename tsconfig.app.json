@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json", // 继承默认的 tsconfig 配置
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // 指定文件用来存储增量编译信息
+
+    /* Linting */
+    "strict": true, // 是否启动所有类型检查
+    "noUnusedLocals": true, // 检查是否有定义但是没有使用的变量
+    "noUnusedParameters": true, // 检查是否有在函数体中没有使用的参数
+    "noFallthroughCasesInSwitch": true, // 检查 Switch 中是否有 Case 没有使用 break 跳出
+    "noUncheckedSideEffectImports": true, // 检查所有副作用导入是否有效
+
+    /* Alias */
+    "baseUrl": ".", // 设置解析非相对模块名称的基本目录
+    "paths": { "@/*": ["src/*"] } // 设置模块名称到基于 baseUrl 的路径映射
+  },
+  // 指定要编译的路径列表
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ]
+}

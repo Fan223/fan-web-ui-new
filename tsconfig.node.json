@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // 指定文件用来存储增量编译信息
+    "target": "ES2022", // 用于指定编译之后的版本目标
+    "lib": ["ES2023"], // 指定要包含在编译中的库文件
+    "module": "ESNext", // 指定要使用的模块标准
+    "skipLibCheck": true, // 跳过声明文件的类型检查
+
+    /* Bundler mode */
+    "moduleResolution": "bundler", // 模块解析策略
+    "allowImportingTsExtensions": true, // 允许在非 TypeScript 文件中导入 .ts 或 .tsx 文件
+    "isolatedModules": true, // 是否将每个文件作为单独的模块
+    "moduleDetection": "force", // 强制 TypeScript 将所有文件视为模块
+    "noEmit": true, // 不生成编译文件
+
+    /* Linting */
+    "strict": true, // 是否启动所有类型检查
+    "noUnusedLocals": true, // 检查是否有定义但是没有使用的变量
+    "noUnusedParameters": true, // 检查是否有在函数体中没有使用的参数
+    "noFallthroughCasesInSwitch": true, // 检查 Switch 中是否有 Case 没有使用 break 跳出
+    "noUncheckedSideEffectImports": true // 检查所有副作用导入是否有效
+  },
+  "include": ["vite.config.ts"] // 指定要编译的路径列表
+}

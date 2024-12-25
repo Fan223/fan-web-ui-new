@@ -1,0 +1,16 @@
+@use '../css/theme.css';
+
+body {
+  margin: 0;
+}
+
+:root {
+  /* prettier-ignore */
+  --main-gradient: linear-gradient(130deg, #24c6dc, #5433ff 41.07%, #ff0099 76.05%);
+  --main-transition: all 0.5s ease-in-out;
+
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+  /* prettier-ignore */
+  scrollbar-color: var(--background-scrollbar-thumb) var(--background-scrollbar-track);
+}
